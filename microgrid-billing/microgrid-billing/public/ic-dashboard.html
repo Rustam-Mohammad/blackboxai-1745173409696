@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Committee Dashboard</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="welcome-logout">
+        <p>Welcome, <span id="usernameDisplay"></span>!</p>
+      </div>
+      <div class="header-content">
+        <h1>Insurance Committee Dashboard</h1>
+        <p class="subtitle">Solar Microgrid Project Billing</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <section class="cards-section">
+      <div class="card debug-card" id="insurancePremiumFormBtn" onclick="window.location.href='/insurance-premium-form.html'">
+        <span class="icon">💰</span>
+        <h3>Insurance Premium Form</h3>
+        <p>Submit insurance premium data</p>
+      </div>
+      <div class="card debug-card" id="insuranceUsageTrackerFormBtn" onclick="window.location.href='/insurance-usage-tracker-form.html'">
+        <span class="icon">📊</span>
+        <h3>Insurance Usage Tracker</h3>
+        <p>Track insurance usage and expenditures</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    // Display username from session or local storage
+    document.getElementById('usernameDisplay').textContent = sessionStorage.getItem('username') || 'User';
+
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.clear();
+      window.location.href = '/login.html';
+    });
+  </script>
+</body>
+</html>
