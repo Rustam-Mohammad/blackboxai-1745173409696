@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit VEC Submission - Solar Microgrid Project</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="dashboard-header">
+    <h1>Solar Microgrid Project</h1>
+    <button id="logoutBtn" class="logout-btn">Logout</button>
+  </header>
+  <div class="vec-form-container">
+    <h2>Edit VEC Submission for <span id="hamlet"></span></h2>
+    <form id="vecForm" enctype="multipart/form-data">
+      <!-- Location Fields (Read-Only) -->
+      <label>State:</label>
+      <input type="text" name="state" readonly><br>
+      <label>District:</label>
+      <input type="text" name="district" readonly><br>
+      <label>Block:</label>
+      <input type="text" name="block" readonly><br>
+      <label>GP:</label>
+      <input type="text" name="gp" readonly><br>
+      <label>Village:</label>
+      <input type="text" name="village" readonly><br>
+      <label>Hamlet:</label>
+      <input type="text" name="hamlet" readonly><br>
+      <label>VEC Name:</label>
+      <input type="text" name="vec_name" readonly><br>
+      <label>Microgrid ID:</label>
+      <input type="text" name="micro_id" readonly><br>
+
+      <!-- Submission Fields -->
+      <label>Submission Date:</label>
+      <input type="date" name="submission_date" required><br>
+      <label>General Issues:</label>
+      <select name="general_issues" multiple>
+        <option value="No Issue">No Issue</option>
+        <option value="Power Outage">Power Outage</option>
+        <option value="Equipment Failure">Equipment Failure</option>
+        <option value="Billing Dispute">Billing Dispute</option>
+        <option value="Other">Other</option>
+      </select><br>
+      <div id="issueImgDiv" style="display: none;">
+        <label>Issue Image:</label>
+        <input type="file" id="issue_img" name="issue_img" accept="image/*"><br>
+      </div>
+      <label>Amount Collected for the Month:</label>
+      <input type="number" name="amount_collected_for_the_Month" step="0.01" readonly><br>
+      <label>Amount from Other Sources:</label>
+      <input type="number" name="amount_other_source" step="0.01"><br>
+      <label>Total Amount Collected for the Month:</label>
+      <input type="number" name="total_amount_collected_for_the_Month" step="0.01" readonly><br>
+      <label>Expenditure for the Month:</label>
+      <input type="number" name="expenditure_for_the_Month" step="0.01"><br>
+      <label>Savings for this Month:</label>
+      <input type="number" name="savings_for_this_month" step="0.01" readonly><br>
+      <label>Total Savings:</label>
+      <input type="number" name="total_savings" step="0.01"><br>
+      <label>Amount in Bank:</label>
+      <input type="number" name="amount_bank" step="0.01"><br>
+      <label>Amount in Hand:</label>
+      <input type="number" name="amount_hand" step="0.01" readonly><br>
+
+      <!-- Buttons -->
+      <button type="submit" id="submitBtn" class="dashboard-btn">Save Changes</button>
+      <button type="button" id="backBtn" class="dashboard-btn">Back</button>
+    </form>
+  </div>
+  <script src="/scripts/edit-vec-form.js"></script>
+</body>
+</html>
