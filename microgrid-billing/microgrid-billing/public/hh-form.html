@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HH Form</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">HH Form</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="hh-form-container">
+      <h2>HH Submission Form</h2>
+      <form id="hhForm" class="form-card">
+        <div class="form-group">
+          <label>State: <input type="text" name="state" value="Jharkhand" readonly></label>
+          <label>District: <input type="text" name="district" value="Dumka" readonly></label>
+          <label>Block: <input type="text" name="block" value="Kurdeg" readonly></label>
+          <label>GP: <input type="text" name="gp" value="Barkibiura" readonly></label>
+          <label>Village: <input type="text" name="village" value="Saraipani" readonly></label>
+          <label>Hamlet: <input type="text" name="hamlet" value="Saraipani" readonly></label>
+          <label>VEC Name: <input type="text" name="vec_name" value="Prakash Saur Oorja Samiti" readonly></label>
+          <label>Microgrid ID: <input type="text" name="micro_id" value="MG-SARAIPANI" readonly></label>
+          <label>Head of Household: <input type="text" name="hh_head" readonly></label>
+          <label>Meter Serial Number: <input type="text" name="meter_num" value="M12345" readonly></label>
+          <label>Customer ID: <input type="text" name="customer_id" readonly></label>
+          <label>Gender: <input type="text" name="cust_gender" value="Male" readonly></label>
+        </div>
+        <div class="form-group">
+          <label>Date of Reading: <input type="date" name="read_date" required></label>
+          <label>Individual Issues:
+            <select name="individual_issues" multiple>
+              <option value="No Issue" selected>No Issue</option>
+              <option value="Meter Tampering">Meter Tampering</option>
+              <option value="Broken Meter">Broken Meter</option>
+              <option value="Wiring Issues">Wiring and Earthing Issues</option>
+              <option value="Switch Faults">Switch/Wire Faults</option>
+              <option value="Migrated">Migrated</option>
+              <option value="Waive Off">Waive Off</option>
+              <option value="Partial Waive Off - Fixed Charge">Partial Waive Off - Fixed Charge</option>
+              <option value="Partial Waive Off - Tariff">Partial Waive Off - Tariff</option>
+            </select>
+          </label>
+          <div id="issueImgDiv" style="display: none;">
+            <label>Add Image: <input type="file" name="issue_img" accept="image/*" capture="camera"></label>
+          </div>
+        </div>
+        <div id="billingSection" class="form-group billing-section">
+          <h3>Billing Section</h3>
+          <label>Bill Number: <input type="text" name="bill_id" readonly></label>
+          <label>Current Meter Reading: <input type="number" name="meter_read" step="0.1" required></label>
+          <label>Meter Reading Image: <input type="file" name="meter_image" accept="image/*" capture="camera"></label>
+          <label>Previous Month Reading: <input type="number" name="prev_read" step="0.1"></label>
+          <label>Units Consumed: <input type="number" name="net_consumed" readonly></label>
+          <label>Current Month Bill: <input type="number" name="current_bill" readonly></label>
+          <label>Past Dues: <input type="number" name="past_due"></label>
+          <label>Total Bill Due: <input type="number" name="total_due" readonly></label>
+          <label>Amount Paid: <input type="number" name="amount_paid" step="0.01" required></label>
+          <label>Balance Amount: <input type="number" name="amount_balance" readonly></label>
+        </div>
+        <div class="button-group">
+          <button type="button" id="draftBtn" class="form-btn draft-btn">Save Draft</button>
+          <button type="submit" id="submitBtn" class="form-btn">Submit</button>
+          <button type="button" id="backBtn" class="form-btn back-btn">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/scripts/hh-form.js"></script>
+</body>
+</html>
