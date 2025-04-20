@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Usage Tracker</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">Insurance Usage Tracker</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="form-container">
+      <form id="insuranceUsageTrackerForm" class="form-card">
+        <div class="form-group">
+          <label>Insurance Amount Used: <input type="number" name="insurance_amount_used" required></label>
+          <label>Used For:
+            <select name="used_for" required>
+              <option value="">Select</option>
+              <option value="Claim by VEC">Claim by VEC</option>
+              <option value="Inventory Purchasing">Inventory Purchasing</option>
+              <option value="Other Expenditure">Other Expenditure</option>
+            </select>
+          </label>
+          <label id="specifyOtherLabel" style="display:none;">Please specify: <input type="text" name="specify_other"></label>
+          <label id="hamletDropdownLabel" style="display:none;">Hamlet:
+            <select name="hamlet" id="hamletDropdown">
+              <!-- Options to be populated dynamically -->
+            </select>
+          </label>
+          <label>Add Image: <input type="file" name="add_image" accept="image/*" capture="camera" required></label>
+          <label>Insurance Amount Left: <input type="number" name="insurance_amount_left" readonly required></label>
+        </div>
+        <div class="button-group">
+          <button type="button" id="draftBtn" class="form-btn draft-btn">Save Draft</button>
+          <button type="submit" id="submitBtn" class="form-btn">Submit</button>
+          <button type="button" id="backBtn" class="form-btn back-btn">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/scripts/insurance-usage-tracker-form.js"></script>
+</body>
+</html>
