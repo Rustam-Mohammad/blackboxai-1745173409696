@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Claim Request Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">Insurance Claim Request Form</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="vec-form-container">
+      <h2>Insurance Claim Request Form for <span id="hamlet"></span></h2>
+      <form id="insuranceForm" class="form-card" enctype="multipart/form-data">
+        <div class="form-group">
+          <label>State: <input type="text" id="state" name="state" readonly></label>
+          <label>District: <input type="text" id="district" name="district" readonly></label>
+          <label>Block: <input type="text" id="block" name="block" readonly></label>
+          <label>GP: <input type="text" id="gp" name="gp" readonly></label>
+          <label>Village: <input type="text" id="village" name="village" readonly></label>
+          <label>Hamlet: <input type="text" id="hamlet_input" name="hamlet" readonly></label>
+          <label>VEC Name: <input type="text" id="vec_name" name="vec_name" readonly></label>
+          <label>Microgrid ID: <input type="text" id="microgrid_id" name="microgrid_id" readonly></label>
+          <label>Claim Reference Number: <input type="text" id="claim_ref_number" name="claim_ref_number" readonly></label>
+        </div>
+
+        <div class="form-group">
+          <label>Claim Date: <input type="date" id="claim_date" name="claim_date" required></label>
+          <label>Claiming for:
+            <select id="claiming_for" name="claiming_for" required>
+              <option value="">Select an option</option>
+              <option value="Broken/Damage Solar Panel">Broken/Damage Solar Panel</option>
+              <option value="Damaged Inverter">Damaged Inverter</option>
+              <option value="Damaged Charge Controller">Damaged Charge Controller</option>
+              <option value="Broken/Damaged Meter">Broken/Damaged Meter</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="claiming_for_image_container" class="form-group">
+          <!-- Dynamic image upload field will be added here -->
+        </div>
+
+        <div class="form-group">
+          <label>Claim Application Photo: <input type="file" id="claim_application_photo" name="claim_application_photo" accept="image/*" required></label>
+          <div id="claim_application_photo_preview" class="photo-preview"></div>
+        </div>
+
+        <div class="button-container">
+          <button type="button" id="draftBtn" class="form-btn draft-btn">Save Draft</button>
+          <button type="submit" id="submitBtn" class="form-btn">Submit</button>
+          <button type="button" id="backBtn" class="form-btn back-btn">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="scripts/insurance-form.js"></script>
+</body>
+</html> 
