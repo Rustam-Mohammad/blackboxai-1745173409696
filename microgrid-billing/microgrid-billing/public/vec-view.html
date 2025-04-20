@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VEC Form</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <h1>VEC Form for <span id="hamlet_display"></span></h1>
+  <form id="vecForm">
+    <input type="hidden" id="hamlet" name="hamlet">
+    <label>VEC Name: <input type="text" id="vec_name" name="vec_name" readonly></label><br>
+    <label>State: <input type="text" id="state" name="state" readonly></label><br>
+    <label>District: <input type="text" id="district" name="district" readonly></label><br>
+    <label>Block: <input type="text" id="block" name="block" readonly></label><br>
+    <label>GP: <input type="text" id="gp" name="gp" readonly></label><br>
+    <label>Village: <input type="text" id="village" name="village" readonly></label><br>
+    <label>Microgrid ID: <input type="text" id="microgrid_id" name="microgrid_id" readonly></label><br>
+    <label>Submission Date: <input type="date" id="submission_date" name="submission_date"></label><br>
+    <label>Amount Collected for the Month: <input type="number" id="amount_collected" name="amount_collected" readonly></label><br>
+    <label>Expenditure for the Month: <input type="number" id="expenditure" name="expenditure" step="0.01"></label><br>
+    <label>Total Saving for the Month: <input type="number" id="total_saving_month" name="total_saving_month" readonly></label><br>
+    <label>Total Saving: <input type="number" id="total_saving" name="total_saving"></label><br>
+    <label>Amount in Bank: <input type="number" id="amount_in_bank" name="amount_in_bank" step="0.01"></label><br>
+    <label>Amount in Hand: <input type="number" id="amount_in_hand" name="amount_in_hand" readonly></label><br>
+    <label>General Issue (Optional): 
+      <select id="general_issue" name="general_issue" multiple>
+        <option value="Damaged Solar Panel">Damaged Solar Panel</option>
+        <option value="Issues with Physical Structure">Issues with Physical Structure</option>
+        <option value="Inverter Fault/Damage">Inverter Fault/Damage</option>
+        <option value="Battery Issues/Failure">Battery Issues/Failure</option>
+        <option value="General Wiring and Switchgear Issues">General Wiring and Switchgear Issues</option>
+        <option value="Issues with Distribution Network">Issues with Distribution Network</option>
+      </select>
+    </label><br>
+    <label>Issue Image (Optional): <input type="file" id="issue_img" name="issue_img"></label><br>
+    <input type="submit" value="Submit">
+  </form>
+  <button id="backBtn">Back</button>
+  <button id="logoutBtn">Logout</button>
+  <script src="/scripts/vec-form.js"></script>
+</body>
+</html>
