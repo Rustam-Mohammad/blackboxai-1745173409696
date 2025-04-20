@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VEC Data</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="vec-data">
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">VEC Data</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="filter-container">
+      <div class="dropdown">
+        <div class="dropdown-label" id="hamletLabel">Hamlet</div>
+        <div class="dropdown-content" id="hamletDropdown"></div>
+      </div>
+      <div class="dropdown">
+        <div class="dropdown-label" id="monthLabel">Month</div>
+        <div class="dropdown-content" id="monthDropdown"></div>
+      </div>
+      <button id="clearFiltersBtn" class="form-btn">Clear Filters</button>
+      <button id="downloadCsvBtn" class="download-btn">Download as CSV</button>
+    </div>
+    <table id="vecTable" class="data-table">
+      <thead>
+        <tr>
+          <th>State</th>
+          <th>District</th>
+          <th>Block</th>
+          <th>GP</th>
+          <th>Village</th>
+          <th>Hamlet</th>
+          <th>VEC Name</th>
+          <th>Microgrid ID</th>
+          <th>Submission Date</th>
+          <th>General Issues</th>
+          <th>Amount Collected for the Month</th>
+          <th>Amount from Other Sources</th>
+          <th>Total Amount Collected for the Month</th>
+          <th>Expenditure for the Month</th>
+          <th>Savings for this Month</th>
+          <th>Total Savings</th>
+          <th>Amount in Bank</th>
+          <th>Amount in Hand</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="backBtn" class="large-back-btn">Back</button>
+  </div>
+  <script src="/scripts/vec-data.js?v=11"></script>
+</body>
+</html>
