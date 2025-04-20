@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Entries</title>
+  <link rel="stylesheet" href="/styles.css?v=15">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="welcome-logout">
+        <p>Welcome, <span id="usernameDisplay"></span>!</p>
+      </div>
+      <div class="header-content">
+        <h1>Edit Entries</h1>
+        <p class="subtitle">Solar Microgrid Project Billing</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="search-container">
+      <div class="form-group">
+        <input type="text" id="hhSearch" placeholder="Search by Name, Customer ID, or Hamlet">
+      </div>
+    </div>
+    <div class="filter-container">
+      <div class="dropdown">
+        <div class="dropdown-label" id="typeLabel">Type (HH/VEC)</div>
+        <div class="dropdown-content" id="typeDropdown">
+          <label><input type="checkbox" value="HH">HH</label>
+          <label><input type="checkbox" value="VEC">VEC</label>
+        </div>
+      </div>
+      <div class="dropdown">
+        <div class="dropdown-label" id="hamletLabel">Hamlet</div>
+        <div class="dropdown-content" id="hamletDropdown"></div>
+      </div>
+      <div class="dropdown">
+        <div class="dropdown-label" id="monthLabel">Month</div>
+        <div class="dropdown-content" id="monthDropdown"></div>
+      </div>
+      <button id="clearFilterBtn" class="form-btn">Clear Filter</button>
+    </div>
+    <div class="submissions-list">
+      <div id="entriesContainer"></div>
+    </div>
+    <button id="backBtn" class="large-back-btn">Back</button>
+  </div>
+  <script src="/scripts/edit-entries.js?v=15"></script>
+</body>
+</html>
