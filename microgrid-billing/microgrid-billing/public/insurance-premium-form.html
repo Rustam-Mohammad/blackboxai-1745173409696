@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Premium Form</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">Insurance Premium Form</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="form-container">
+      <form id="insurancePremiumForm" class="form-card">
+        <div class="form-group">
+          <label>Hamlet:
+            <select name="hamlet" required>
+              <!-- Options to be populated dynamically -->
+            </select>
+          </label>
+          <label>State: <input type="text" name="state" readonly></label>
+          <label>District: <input type="text" name="district" readonly></label>
+          <label>Block: <input type="text" name="block" readonly></label>
+          <label>GP: <input type="text" name="gp" readonly></label>
+          <label>Village: <input type="text" name="village" readonly></label>
+          <label>VEC Name: <input type="text" name="vec_name" readonly></label>
+          <label>Micro Grid ID: <input type="text" name="microgrid_id" readonly></label>
+        </div>
+        <div class="form-group">
+          <label>Premium Amount Decided by IC: <input type="number" name="premium_amount_decided" required></label>
+          <label>Premium Amount Paid:
+            <select name="premium_amount_paid" required>
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </label>
+          <label>Date of Payment: <input type="date" name="date_of_payment" required></label>
+          <label>Receipt Image: <input type="file" name="receipt_image" accept="image/*" capture="camera" required></label>
+        </div>
+        <div class="button-group">
+          <button type="button" id="draftBtn" class="form-btn draft-btn">Save Draft</button>
+          <button type="submit" id="submitBtn" class="form-btn">Submit</button>
+          <button type="button" id="backBtn" class="form-btn back-btn">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/scripts/insurance-premium-form.js"></script>
+</body>
+</html>
