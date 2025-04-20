@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HH Entries</title>
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+  </style>
+</head>
+<body>
+  <h1>HH Entries</h1>
+  <button id="downloadCsvBtn">Download as CSV</button>
+  <table id="hhTable">
+    <thead>
+      <tr>
+        <th>Customer ID</th>
+        <th>HH Name</th>
+        <th>Date</th>
+        <th>Meter Reading</th>
+        <th>Units Consumed</th>
+        <th>Current Bill</th>
+        <th>Past Due</th>
+        <th>Total Due</th>
+        <th>Amount Paid</th>
+        <th>Balance</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <button id="backBtn" class="back-btn">Back</button>
+  <script src="/scripts/hh-entries.js"></script>
+</body>
+</html>
