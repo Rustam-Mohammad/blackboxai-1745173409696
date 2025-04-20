@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>VEC Form</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">VEC Form</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="vec-form-container">
+      <h2>VEC Form for <span id="hamlet"></span></h2>
+      <form id="vecForm" class="form-card" enctype="multipart/form-data">
+        <div class="form-group">
+          <label>State: <input type="text" name="state" readonly></label>
+          <label>District: <input type="text" name="district" readonly></label>
+          <label>Block: <input type="text" name="block" readonly></label>
+          <label>GP: <input type="text" name="gp" readonly></label>
+          <label>Village: <input type="text" name="village" readonly></label>
+          <label>Hamlet: <input type="text" name="hamlet" readonly></label>
+          <label>VEC Name: <input type="text" name="vec_name" readonly></label>
+          <label>Microgrid ID: <input type="text" name="micro_id" readonly></label>
+        </div>
+        <div class="form-group">
+          <label>Submission Date: <input type="date" name="submission_date" required></label>
+          <label>General Issues:
+            <select name="general_issues" multiple>
+              <option value="No Issue">No Issue</option>
+              <option value="Power Outage">Power Outage</option>
+              <option value="Equipment Failure">Equipment Failure</option>
+              <option value="Billing Dispute">Billing Dispute</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <div id="issueImgDiv" style="display: none;">
+            <label>Issue Image: <input type="file" id="issue_img" name="issue_img" accept="image/*"></label>
+          </div>
+        </div>
+        <div class="form-group financial-section">
+          <h3>Financial Section</h3>
+          <label>Amount Collected for the Month: <input type="number" name="amount_collected_for_the_Month" step="0.01" readonly></label>
+          <label>Amount from Other Sources: <input type="number" name="amount_other_source" step="0.01"></label>
+          <label>Total Amount Collected for the Month: <input type="number" name="total_amount_collected_for_the_Month" step="0.01" readonly></label>
+          <label>Expenditure for the Month: <input type="number" name="expenditure_for_the_Month" step="0.01"></label>
+          <label>Savings for this Month: <input type="number" name="savings_for_this_month" step="0.01" readonly></label>
+          <label>Total Savings: <input type="number" name="total_savings" step="0.01"></label>
+          <label>Amount in Bank: <input type="number" name="amount_bank" step="0.01"></label>
+          <label>Amount in Hand: <input type="number" name="amount_hand" step="0.01" readonly></label>
+        </div>
+        <div class="button-group">
+          <button type="button" id="draftBtn" class="form-btn draft-btn">Save Draft</button>
+          <button type="submit" id="submitBtn" class="form-btn">Submit</button>
+          <button type="button" id="backBtn" class="form-btn back-btn">Back</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="/scripts/vec-form.js"></script>
+</body>
+</html>
