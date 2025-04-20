@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bulk VEC Upload</title>
+  <link rel="stylesheet" href="/styles.css?v=9">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Bulk VEC Upload</h1>
+        <p class="subtitle">Solar Microgrid Project Billing</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <section class="upload-section">
+      <div class="form-card">
+        <p>Upload a CSV file with columns: hamlet, vec_name, state, district, block, gp, village, microgrid_id</p>
+        <form id="vecBulkForm">
+          <div class="form-row">
+            <div class="form-left">
+              <input type="file" name="file" accept=".csv" required>
+              <button type="submit" class="form-btn">Upload</button>
+            </div>
+            <div class="form-right">
+              <button type="button" id="downloadTemplateBtn" class="form-btn">Download Template</button>
+            </div>
+          </div>
+        </form>
+        <progress id="uploadProgress" value="0" max="100" style="display: none;"></progress>
+      </div>
+    </section>
+    <div id="previewModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h3>Preview CSV Data</h3>
+        <table id="previewTable" class="data-table">
+          <thead>
+            <tr>
+              <th>Hamlet</th>
+              <th>VEC Name</th>
+              <th>State</th>
+              <th>District</th>
+              <th>Block</th>
+              <th>GP</th>
+              <th>Village</th>
+              <th>Microgrid ID</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <p id="previewErrors" style="color: #c0392b;"></p>
+        <div class="button-group">
+          <button id="confirmUploadBtn" class="form-btn">Confirm Upload</button>
+          <button id="cancelUploadBtn" class="form-btn">Cancel</button>
+        </div>
+      </div>
+    </div>
+    <div class="filter-container">
+      <div class="dropdown">
+        <div class="dropdown-label" id="hamletLabel">Hamlet</div>
+        <div class="dropdown-content" id="hamletDropdown">
+          <label><input type="checkbox" value="">All</label>
+        </div>
+      </div>
+      <button id="clearFiltersBtn" class="form-btn">Clear Filters</button>
+    </div>
+    <table id="vecTable" class="data-table">
+      <thead>
+        <tr>
+          <th>
+            <input type="checkbox" id="selectAll">
+            <button id="batchRemoveBtn" class="batch-remove-btn">Remove Selected</button>
+          </th>
+          <th>Hamlet</th>
+          <th>VEC Name</th>
+          <th>State</th>
+          <th>District</th>
+          <th>Block</th>
+          <th>GP</th>
+          <th>Village</th>
+          <th>Microgrid ID</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="backBtn" class="large-back-btn">Back</button>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="/scripts/vec-bulk.js?v=9"></script>
+</body>
+</html>
