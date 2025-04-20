@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insurance Premium Data</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body data-page="insurance-premium-data">
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Solar Microgrid Project</h1>
+        <p class="page-title">Insurance Premium Data</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="filter-container">
+      <div class="dropdown">
+        <div class="dropdown-label" id="hamletLabel">Hamlet</div>
+        <div class="dropdown-content" id="hamletDropdown"></div>
+      </div>
+      <div class="dropdown">
+        <div class="dropdown-label" id="monthLabel">Month</div>
+        <div class="dropdown-content" id="monthDropdown"></div>
+      </div>
+      <button id="clearFiltersBtn" class="form-btn">Clear Filters</button>
+      <button id="downloadCsvBtn" class="download-btn">Download as CSV</button>
+    </div>
+    <table id="insurancePremiumTable" class="data-table">
+      <thead>
+        <tr>
+          <th>Hamlet</th>
+          <th>State</th>
+          <th>District</th>
+          <th>Block</th>
+          <th>GP</th>
+          <th>Village</th>
+          <th>VEC Name</th>
+          <th>Micro Grid ID</th>
+          <th>Premium Amount Decided</th>
+          <th>Premium Amount Paid</th>
+          <th>Date of Payment</th>
+          <th>Receipt Image</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <button id="backBtn" class="large-back-btn">Back</button>
+  </div>
+  <script src="/scripts/insurance-premium-data.js"></script>
+</body>
+</html>
