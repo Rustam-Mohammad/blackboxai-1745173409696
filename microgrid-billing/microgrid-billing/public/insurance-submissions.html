@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Claim Requests</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="insurance-submissions">
+  <div class="dashboard-container insurance-submissions-container">
+    <div class="dashboard-header">
+      <div class="header-content">
+        <h1>Insurance Claim Requests</h1>
+        <p class="subtitle">Hamlet: <span id="hamlet"></span></p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+
+    <div id="submissions" class="submissions-list">
+      <!-- Submissions will be dynamically added here -->
+    </div>
+
+    <div class="button-container">
+      <button id="newEntryBtn" class="form-btn">New Insurance Claim Request</button>
+      <button id="backBtn" class="form-btn back-btn">Back to Dashboard</button>
+    </div>
+  </div>
+
+  <script src="scripts/insurance-submissions.js"></script>
+</body>
+</html> 
