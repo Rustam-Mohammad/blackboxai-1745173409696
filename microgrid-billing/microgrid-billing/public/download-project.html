@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Download Project</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Download Project</h1>
+        <p class="page-title">Download the complete project files</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <div class="download-container">
+      <h2>Download Project Archive</h2>
+      <p>You can download the complete project as a ZIP archive below:</p>
+      <a href="/project-archive.zip" download class="form-btn">Download ZIP</a>
+    </div>
+  </div>
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      sessionStorage.clear();
+      window.location.href = '/login.html';
+    });
+  </script>
+</body>
+</html>
