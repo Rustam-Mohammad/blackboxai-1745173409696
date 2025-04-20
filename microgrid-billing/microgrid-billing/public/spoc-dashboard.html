@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SPOC Dashboard</title>
+  <link rel="stylesheet" href="/styles.css?v=11">
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="welcome-logout">
+        <p>Welcome, <span id="usernameDisplay"></span>!</p>
+      </div>
+      <div class="header-content">
+        <h1>SPOC Dashboard</h1>
+        <p class="subtitle">Solar Microgrid Project Billing</p>
+      </div>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </header>
+    <section class="cards-section">
+      <div class="card debug-card" id="hhFormBtn" onclick="window.location.href='/hh-data.html'">
+        <span class="icon">🏠</span>
+        <h3>HH Data</h3>
+        <p>View household data</p>
+      </div>
+      <div class="card debug-card" id="vecFormBtn" onclick="window.location.href='/vec-data.html'">
+        <span class="icon">🏘️</span>
+        <h3>VEC Data</h3>
+        <p>Manage village energy committee data</p>
+      </div>
+      <div class="card debug-card" id="insuranceDataBtn" onclick="window.location.href='/insurance-data.html'">
+        <span class="icon">📋</span>
+        <h3>Insurance Claim Request Data</h3>
+        <p>View insurance claim requests</p>
+      </div>
+      <div class="card debug-card" id="insurancePremiumDataBtn" onclick="window.location.href='/insurance-premium-data.html'">
+        <span class="icon">💰</span>
+        <h3>Insurance Premium Data</h3>
+        <p>View insurance premium submissions</p>
+      </div>
+      <div class="card debug-card" id="insuranceUsageDataBtn" onclick="window.location.href='/insurance-usage-tracker-data.html'">
+        <span class="icon">📊</span>
+        <h3>Insurance Usage</h3>
+        <p>View insurance usage tracker data</p>
+      </div>
+      <div class="card debug-card" id="addHHBtn" onclick="window.location.href='/hh-bulk.html'">
+        <span class="icon">🏠</span>
+        <h3>Add/Remove HH</h3>
+        <p>Bulk upload or remove household records</p>
+      </div>
+      <div class="card debug-card" id="addVECBtn" onclick="window.location.href='/vec-bulk.html'">
+        <span class="icon">🏘️</span>
+        <h3>Add/Remove VEC</h3>
+        <p>Bulk upload or remove VEC records</p>
+      </div>
+      <div class="card debug-card" id="userManagementBtn" onclick="window.location.href='/user-management.html'">
+        <span class="icon">👥</span>
+        <h3>User Management</h3>
+        <p>Add or remove operators</p>
+      </div>
+      <div class="card debug-card" id="editEntriesBtn" onclick="window.location.href='/edit-entries.html'">
+        <span class="icon">✏️</span>
+        <h3>Edit Entries</h3>
+        <p>Modify or remove submissions</p>
+      </div>
+    </section>
+  </div>
+  <script src="/scripts/spoc-dashboard.js"></script>
+</body>
+</html>
